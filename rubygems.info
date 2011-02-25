@@ -1,0 +1,5 @@
+; Developed by Dennis Stevense for Digital Deployment
+name = RubyGems
+description = Allows you to keep Ruby gems in your site directory.
+version = 6.x-1.x-dev
+core = 6.x

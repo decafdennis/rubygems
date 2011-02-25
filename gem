@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Work out the gems directory
+WORKING_DIR=`pwd`
+SCRIPT_DIR=`dirname "$0"`
+GEMS_DIR="$WORKING_DIR/$SCRIPT_DIR/gems"
+
+# Run gem in the right environment, passing along our arguments
+GEM_HOME="$GEMS_DIR" GEM_PATH="" gem $@

@@ -1,0 +1,16 @@
+<?php
+// Developed by Dennis Stevense for Digital Deployment
+
+/**
+ * Implementation of hook_init().
+ */
+function rubygems_init() {
+  // Work out the gems directory
+  $gems_dir = realpath(drupal_get_path('module', 'rubygems') . '/gems');
+  
+  if ($gems_dir !== FALSE) {
+    // Create an environment in which only our gems are used
+    putenv("GEM_HOME=$gems_dir");
+    putenv("GEM_PATH=");
+  }
+}
